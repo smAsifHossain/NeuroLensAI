@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neurolens-brats"
+version = "0.1.0"
+description = "Zero-training MONAI BraTS feasibility pipeline"
+requires-python = ">=3.10"
+dependencies = [
+  "numpy>=1.24,<3",
+  "pillow>=10,<13",
+]
+
+[project.optional-dependencies]
+cloud = [
+  "monai==1.5.2",
+  "nibabel==5.2.1",
+  "pytorch-ignite==0.4.11",
+  "fire>=0.5,<1",
+  "huggingface_hub>=0.23,<2",
+  "reportlab>=4,<5",
+]
+
+[project.scripts]
+neurolens-brats = "neurolens.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["neurolens*"]

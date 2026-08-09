@@ -1,0 +1,20 @@
+{
+  "name": "neurolens-ai-pages",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:pages": "vite build --config vite.github.config.ts"
+  },
+  "dependencies": {
+    "@gradio/client": "2.4.0",
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.2.1",
+    "@vitejs/plugin-react": "6.0.2",
+    "tailwindcss": "4.2.1",
+    "vite": "8.0.13"
+  }
+}

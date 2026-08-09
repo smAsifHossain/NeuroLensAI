@@ -1,0 +1,11 @@
+# Keep the historical model bundle while using a NumPy-2-compatible MONAI
+# runtime. Kaggle/Colab already provide a CUDA-enabled torch build, so torch
+# is intentionally not pinned here.
+monai==1.5.2
+nibabel==5.2.1
+pytorch-ignite==0.4.11
+fire>=0.5,<1
+huggingface_hub>=0.23,<2
+pillow>=10,<13
+reportlab>=4,<5
+gradio>=5,<7
