@@ -418,7 +418,7 @@ export default function Home() {
                 <div className="dropPromptActions">
                   <button className="primaryButton" onClick={() => fileInputRef.current?.click()}>Choose MRI scan ZIP</button>
                   <a className="sampleDataButton" href={SAMPLE_DATA_URL} target="_blank" rel="noreferrer">
-                    Download sample MRI scans <span aria-hidden="true">&nearr;</span>
+                    Download sample MRI scans <span aria-hidden="true">{"↗"}</span>
                   </a>
                 </div>
                 <p className="sampleDataNote">No MRI data available? Choose one of five sample cases and run the complete workflow.</p>
