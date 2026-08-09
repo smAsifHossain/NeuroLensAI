@@ -34,7 +34,7 @@ test("server-renders the NeuroLens product shell", async () => {
   assert.match(html, /Across every MRI sequence/);
   assert.match(html, /Upload MRI scan ZIP/);
   assert.match(html, /Download sample MRI scans/);
-  assert.match(html, /↗/);
+  assert.match(html, /class="downloadIcon"/);
   assert.doesNotMatch(html, /&amp;nearr;|&nearr;/i);
   assert.match(html, /github\.com\/smAsifHossain\/NeuroLensAI\/tree\/main\/sample-mri-scans/);
   assert.match(html, /SegResNet model/);
