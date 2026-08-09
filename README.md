@@ -15,7 +15,7 @@ NIfTI segmentation mask, and a downloadable PDF summary.
   <a href="LICENSE"><img alt="MIT License" src="https://img.shields.io/badge/License-MIT-16a34a?style=flat&amp;logo=opensourceinitiative&amp;logoColor=white&amp;labelColor=15130e"></a>
 </p>
 
-[Live application](https://smasifhossain.github.io/NeuroLensAI/) | [Model benchmark](https://huggingface.co/MONAI/brats_mri_segmentation/blob/main/docs/README.md#performance) | [Feasibility run](docs/FEASIBILITY_RUN.md) | [GPU worker](ml/README.md)
+[Live application](https://smasifhossain.github.io/NeuroLensAI/) | [Sample MRI scans](sample-mri-scans/) | [Model benchmark](https://huggingface.co/MONAI/brats_mri_segmentation/blob/main/docs/README.md#performance) | [Feasibility run](docs/FEASIBILITY_RUN.md) | [GPU worker](ml/README.md)
 
 If NeuroLens AI is useful to you, consider [starring the repository](https://github.com/smAsifHossain/NeuroLensAI). It helps others discover and support the project.
 
@@ -42,6 +42,7 @@ or a clinical radiology reporting system.
 ## Main features
 
 - One clear upload-to-segmentation workflow with no demonstration result.
+- Five downloadable sample MRI cases for users who do not have compatible data.
 - Direct browser transfer to a stable Modal endpoint backed by an NVIDIA L4 GPU.
 - Safe ZIP extraction with traversal, symbolic-link, member-count, and size checks.
 - T1c, T1, T2, and FLAIR discovery across common NIfTI naming conventions.
@@ -108,6 +109,13 @@ the archive root or a case folder.
 Each file must be a `.nii` or `.nii.gz` volume. The uncompressed archive is
 limited to 1.5 GB and 64 files. Upload only de-identified data that you are
 authorized to process.
+
+### Sample MRI scans
+
+Users without compatible data can download one of the five academic cases in the
+[sample MRI scans folder](sample-mri-scans/), return to the application, and
+upload the ZIP without modifying it. The included reference segmentation is kept
+for dataset completeness and is not used as an input to the SegResNet model.
 
 ## Architecture
 
@@ -300,4 +308,6 @@ Developed by [S M Asif Hossain](https://www.linkedin.com/in/smasifhossain).
 
 ## License
 
-NeuroLens AI is available under the [MIT License](LICENSE).
+NeuroLens AI application source is available under the [MIT License](LICENSE).
+The MRI archives in [`sample-mri-scans/`](sample-mri-scans/) are separate dataset
+materials distributed under CC BY-NC 4.0 and are not covered by the MIT License.

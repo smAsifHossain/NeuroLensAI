@@ -33,6 +33,8 @@ test("server-renders the NeuroLens product shell", async () => {
   assert.match(html, /Explore brain tumor regions/);
   assert.match(html, /Across every MRI sequence/);
   assert.match(html, /Upload MRI scan ZIP/);
+  assert.match(html, /Download sample MRI scans/);
+  assert.match(html, /github\.com\/smAsifHossain\/NeuroLensAI\/tree\/main\/sample-mri-scans/);
   assert.match(html, /SegResNet model/);
   assert.match(html, /Developed by S M Asif Hossain/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Your site is taking shape/i);
@@ -52,6 +54,8 @@ test("shows results only after a real worker response", async () => {
   assert.match(page, /worker-config\.json/);
   assert.match(page, /GPU ONLINE/);
   assert.match(page, /Run brain tumor segmentation/);
+  assert.match(page, /SAMPLE_DATA_URL/);
+  assert.match(page, /five sample cases/);
   assert.match(page, /result &&/);
   assert.match(page, /GENERATED FROM THIS UPLOAD/);
   assert.match(page, /does not provide a diagnosis/i);

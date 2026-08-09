@@ -57,6 +57,7 @@ type RemoteFile = {
 };
 
 const MAX_CASE_BYTES = 1.5 * 1024 * 1024 * 1024;
+const SAMPLE_DATA_URL = "https://github.com/smAsifHossain/NeuroLensAI/tree/main/sample-mri-scans";
 const architectureStages = [
   {
     id: "input",
@@ -414,7 +415,13 @@ export default function Home() {
                 <div className="uploadGlyph" aria-hidden="true"><span>ZIP</span></div>
                 <h3>Drop your MRI scan ZIP here</h3>
                 <p>{status.detail}</p>
-                <button className="primaryButton" onClick={() => fileInputRef.current?.click()}>Choose MRI scan ZIP</button>
+                <div className="dropPromptActions">
+                  <button className="primaryButton" onClick={() => fileInputRef.current?.click()}>Choose MRI scan ZIP</button>
+                  <a className="sampleDataButton" href={SAMPLE_DATA_URL} target="_blank" rel="noreferrer">
+                    Download sample MRI scans <span aria-hidden="true">&nearr;</span>
+                  </a>
+                </div>
+                <p className="sampleDataNote">No MRI data available? Choose one of five sample cases and run the complete workflow.</p>
               </div>
             ) : (
               <div className="selectedCase">
